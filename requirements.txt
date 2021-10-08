@@ -1,1 +1,3 @@
-Scrapy
+bs4
+requests
+cloudscraper
