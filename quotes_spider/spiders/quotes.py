@@ -1,4 +1,5 @@
 from scrapy import Spider
+from scrapy.http import Request
 from scrapy.loader import ItemLoader
 from quotes_spider.items import QuotesSpiderItem
 
@@ -25,10 +26,10 @@ class QuotesSpider(Spider):
             author = quote.xpath('.//*[@class="author"]/text()').extract_first()
             tags = quote.xpath('.//*[@itemprop="keywords"]/@content').extract_first()
             
-        yield {'Text': h1_tag, 
-               'Author': tags, 
+        yield {'Text': text, 
+               'Author': author, 
                'Tags': tags}          
             
-        #next_page_url = response.xpath('//*[@class="next"]/a/@href').extract_first()
-        #absolute_next_page_url = response.urljoin(next_page_url)
-        #yield scrapy.Request(absolute_next_page_url)
+        next_page_url = response.xpath('//*[@class="next"]/a/@href').extract_first()
+        absolute_next_page_url = response.urljoin(next_page_url)
+        yield Request(absolute_next_page_url)
