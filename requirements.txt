@@ -1,3 +1,4 @@
 Scrapy
 shub
 msgpack-python
+itemadapter
