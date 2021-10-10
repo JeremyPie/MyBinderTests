@@ -2,3 +2,4 @@ Scrapy
 shub
 msgpack-python
 itemadapter
+selenium
