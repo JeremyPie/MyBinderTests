@@ -4,3 +4,4 @@ msgpack-python
 itemadapter
 selenium
 webdriver_manager
+scrapy_splash
