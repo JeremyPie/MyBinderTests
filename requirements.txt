@@ -3,3 +3,4 @@ shub
 msgpack-python
 itemadapter
 selenium
+webdriver_manager
