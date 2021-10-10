@@ -5,7 +5,7 @@ from scrapy.http import Request
 from time import sleep
 from selenium.common.exceptions import NosuchElementException
 
-class BooksSpider(Spider):
+class Books1Spider(Spider):
     name = 'books1'
     allowed_domains = ['books.toscrape.com']
     
