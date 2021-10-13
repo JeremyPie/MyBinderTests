@@ -4,3 +4,4 @@ msgpack-python
 itemadapter
 scrapy_splash
 bs4
+pywebcopy.pywebcopy 
